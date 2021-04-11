@@ -41,7 +41,7 @@ run_query(conn,statement3)
 run_query(conn,statement4)
 
 
-for obj in s3.Bucket('parkerroy-snowflake').objects.all():
+for obj in s3.Bucket('<s3 bucket name>').objects.all():
     df=pd.read_csv(obj.get()['Body'])
     df.columns = ['SEPALLENGTH', 'SEPALWIDTH', 'PETALLENGTH', 'PETALWIDTH', 'CLASSNAME'];
     write_pandas(conn, df, 'VIDEO')
