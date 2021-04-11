@@ -1,0 +1,7 @@
+drop database parker;
+create database if not exists parker;
+use parker;
+--Table Creation
+create table if not exists video (sepallength number(10,4),sepalwidth number(10,4),petallength number(10,4) , petalwidth number(10,4),classname varchar(200));
+
+select * from video;
